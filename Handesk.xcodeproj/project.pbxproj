@@ -16,6 +16,8 @@
 		8D8756BD241F66C1000DBA40 /* TicketsListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756BC241F66C1000DBA40 /* TicketsListViewControllerTest.swift */; };
 		8D8756C0241F68BD000DBA40 /* TicketsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756BF241F68BD000DBA40 /* TicketsListViewController.swift */; };
 		8D8756C3241F69E8000DBA40 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756C2241F69E8000DBA40 /* Ticket.swift */; };
+		8D8756C5241FE8A1000DBA40 /* Tickets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8756C4241FE8A1000DBA40 /* Tickets.storyboard */; };
+		8D8756C8241FEF68000DBA40 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756C7241FEF68000DBA40 /* TicketCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		8D8756BC241F66C1000DBA40 /* TicketsListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsListViewControllerTest.swift; sourceTree = "<group>"; };
 		8D8756BF241F68BD000DBA40 /* TicketsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsListViewController.swift; sourceTree = "<group>"; };
 		8D8756C2241F69E8000DBA40 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		8D8756C4241FE8A1000DBA40 /* Tickets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tickets.storyboard; sourceTree = "<group>"; };
+		8D8756C7241FEF68000DBA40 /* TicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		8D875698241F6622000DBA40 /* Handesk */ = {
 			isa = PBXGroup;
 			children = (
+				8D8756C6241FEF5E000DBA40 /* Views */,
 				8D8756C1241F69DD000DBA40 /* Models */,
 				8D8756BE241F68AC000DBA40 /* Controllers */,
 				8D875699241F6622000DBA40 /* AppDelegate.swift */,
@@ -117,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				8D8756BF241F68BD000DBA40 /* TicketsListViewController.swift */,
+				8D8756C4241FE8A1000DBA40 /* Tickets.storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -127,6 +133,14 @@
 				8D8756C2241F69E8000DBA40 /* Ticket.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8D8756C6241FEF5E000DBA40 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D8756C7241FEF68000DBA40 /* TicketCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8756C5241FE8A1000DBA40 /* Tickets.storyboard in Resources */,
 				8D8756A6241F6625000DBA40 /* LaunchScreen.storyboard in Resources */,
 				8D8756A3241F6625000DBA40 /* Assets.xcassets in Resources */,
 				8D8756A1241F6622000DBA40 /* Main.storyboard in Resources */,
@@ -233,6 +248,7 @@
 				8D8756C0241F68BD000DBA40 /* TicketsListViewController.swift in Sources */,
 				8D87569E241F6622000DBA40 /* ViewController.swift in Sources */,
 				8D8756C3241F69E8000DBA40 /* Ticket.swift in Sources */,
+				8D8756C8241FEF68000DBA40 /* TicketCell.swift in Sources */,
 				8D87569A241F6622000DBA40 /* AppDelegate.swift in Sources */,
 				8D87569C241F6622000DBA40 /* SceneDelegate.swift in Sources */,
 			);

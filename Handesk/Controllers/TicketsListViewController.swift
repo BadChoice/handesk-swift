@@ -2,6 +2,7 @@ import UIKit
 
 class TicketsListViewController : UIViewController, UITableViewDataSource {
     var tickets:[Ticket]!
+    @IBOutlet weak var tableView:UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tickets.count
