@@ -13,7 +13,6 @@
 		8D8756A1241F6622000DBA40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D87569F241F6622000DBA40 /* Main.storyboard */; };
 		8D8756A3241F6625000DBA40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8756A2241F6625000DBA40 /* Assets.xcassets */; };
 		8D8756A6241F6625000DBA40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8756A4241F6625000DBA40 /* LaunchScreen.storyboard */; };
-		8D8756B1241F6625000DBA40 /* HandeskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756B0241F6625000DBA40 /* HandeskTests.swift */; };
 		8D8756BD241F66C1000DBA40 /* TicketsListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756BC241F66C1000DBA40 /* TicketsListViewControllerTest.swift */; };
 		8D8756C0241F68BD000DBA40 /* TicketsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756BF241F68BD000DBA40 /* TicketsListViewController.swift */; };
 		8D8756C3241F69E8000DBA40 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756C2241F69E8000DBA40 /* Ticket.swift */; };
@@ -39,7 +38,6 @@
 		8D8756A5241F6625000DBA40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D8756A7241F6625000DBA40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D8756AC241F6625000DBA40 /* HandeskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandeskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D8756B0241F6625000DBA40 /* HandeskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandeskTests.swift; sourceTree = "<group>"; };
 		8D8756B2241F6625000DBA40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D8756BC241F66C1000DBA40 /* TicketsListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsListViewControllerTest.swift; sourceTree = "<group>"; };
 		8D8756BF241F68BD000DBA40 /* TicketsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsListViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				8D8756BB241F6690000DBA40 /* feature */,
-				8D8756B0241F6625000DBA40 /* HandeskTests.swift */,
 				8D8756B2241F6625000DBA40 /* Info.plist */,
 			);
 			path = HandeskTests;
@@ -246,7 +243,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8756BD241F66C1000DBA40 /* TicketsListViewControllerTest.swift in Sources */,
-				8D8756B1241F6625000DBA40 /* HandeskTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
