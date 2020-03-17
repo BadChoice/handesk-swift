@@ -13,5 +13,6 @@ class TicketCell : UITableViewCell {
         userLabel.text  = ticket.requester.name
         titleLabel.text = ticket.title
         bodyLabel.text  = ticket.body
+        updatedAtLabel.text = Date(iso8061: ticket.updated_at)?.display
     }
 }

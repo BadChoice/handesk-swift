@@ -5,7 +5,7 @@ extension Ticket {
     init(title:String,
          body:String         = "Body",
          requester:Requester = Requester(name: "Bruce", email: "email@example.com"),
-         updated_at:String   = "Body",
+         updated_at:String   = "2020-03-17T19:20:14+0000",
          status:Status       = .new,
          priority:Priority   = .high,
          bug:Bool            = false,
