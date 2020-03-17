@@ -16,17 +16,82 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-Am-kJA">
-                                <rect key="frame" x="37" y="169" width="357" height="275"/>
+                                <rect key="frame" x="0.0" y="106" width="414" height="790"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="gcl-9o-Hmt" customClass="TicketCell" customModule="Handesk" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="357" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="gcl-9o-Hmt" customClass="TicketCell" customModule="Handesk" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gcl-9o-Hmt" id="RBf-ln-tlj">
-                                            <rect key="frame" x="0.0" y="0.0" width="357" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MtK-Wq-1GO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="8" height="100"/>
+                                                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="8" id="JaE-HU-JCD"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bruce Wayne" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3Y-43-RHl">
+                                                    <rect key="frame" x="76" y="41" width="216" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bruce Wayne" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXX-Ww-30C">
+                                                    <rect key="frame" x="76" y="59" width="216" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bruce Wayne" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNh-SJ-XYW">
+                                                    <rect key="frame" x="309" y="41" width="85" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Wv-3e-BrP">
+                                                    <rect key="frame" x="16" y="24" width="52" height="52"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="52" id="gOy-fo-hJq"/>
+                                                        <constraint firstAttribute="height" constant="52" id="jj3-j4-j1W"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bruce Wayne" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQT-B5-kyT">
+                                                    <rect key="frame" x="76" y="16" width="172" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9gQ-4l-mP4">
+                                                    <rect key="frame" x="263" y="16" width="131" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="MtK-Wq-1GO" secondAttribute="bottom" id="01e-Uw-eCi"/>
+                                                <constraint firstItem="MtK-Wq-1GO" firstAttribute="top" secondItem="RBf-ln-tlj" secondAttribute="top" id="65E-L1-lBR"/>
+                                                <constraint firstItem="MtK-Wq-1GO" firstAttribute="leading" secondItem="RBf-ln-tlj" secondAttribute="leading" id="HFE-A1-dvN"/>
+                                                <constraint firstItem="9Wv-3e-BrP" firstAttribute="leading" secondItem="MtK-Wq-1GO" secondAttribute="trailing" constant="8" id="Ih4-rG-FO8"/>
+                                                <constraint firstItem="9Wv-3e-BrP" firstAttribute="centerY" secondItem="MtK-Wq-1GO" secondAttribute="centerY" id="yZM-09-nVX"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarView" destination="9Wv-3e-BrP" id="mcn-Yw-Ye0"/>
+                                            <outlet property="bodyLabel" destination="GXX-Ww-30C" id="3w4-tk-csA"/>
+                                            <outlet property="infoStackView" destination="9gQ-4l-mP4" id="OgC-Og-bwO"/>
+                                            <outlet property="statusView" destination="MtK-Wq-1GO" id="2jY-8y-tWJ"/>
+                                            <outlet property="titleLabel" destination="r3Y-43-RHl" id="d8M-C6-jr8"/>
+                                            <outlet property="updatedAtLabel" destination="JNh-SJ-XYW" id="DDI-ZF-5Sq"/>
+                                            <outlet property="userLabel" destination="VQT-B5-kyT" id="we6-vr-NmZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

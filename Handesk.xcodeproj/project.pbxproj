@@ -18,6 +18,10 @@
 		8D8756C3241F69E8000DBA40 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756C2241F69E8000DBA40 /* Ticket.swift */; };
 		8D8756C5241FE8A1000DBA40 /* Tickets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8756C4241FE8A1000DBA40 /* Tickets.storyboard */; };
 		8D8756C8241FEF68000DBA40 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756C7241FEF68000DBA40 /* TicketCell.swift */; };
+		8D8756CB2420D227000DBA40 /* TicketCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756CA2420D227000DBA40 /* TicketCellTest.swift */; };
+		8D8756CD2420D6D8000DBA40 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756CC2420D6D8000DBA40 /* Requester.swift */; };
+		8D8756D0242107A6000DBA40 /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756CF242107A6000DBA40 /* Factories.swift */; };
+		8D8756D324210D48000DBA40 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756D224210D48000DBA40 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		8D8756C2241F69E8000DBA40 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		8D8756C4241FE8A1000DBA40 /* Tickets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tickets.storyboard; sourceTree = "<group>"; };
 		8D8756C7241FEF68000DBA40 /* TicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
+		8D8756CA2420D227000DBA40 /* TicketCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCellTest.swift; sourceTree = "<group>"; };
+		8D8756CC2420D6D8000DBA40 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
+		8D8756CF242107A6000DBA40 /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
+		8D8756D224210D48000DBA40 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,9 @@
 		8D8756AF241F6625000DBA40 /* HandeskTests */ = {
 			isa = PBXGroup;
 			children = (
+				8D8756D124210D3F000DBA40 /* helpers */,
+				8D8756CE2421079B000DBA40 /* factories */,
+				8D8756C92420D217000DBA40 /* unit */,
 				8D8756BB241F6690000DBA40 /* feature */,
 				8D8756B2241F6625000DBA40 /* Info.plist */,
 			);
@@ -131,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				8D8756C2241F69E8000DBA40 /* Ticket.swift */,
+				8D8756CC2420D6D8000DBA40 /* Requester.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +153,30 @@
 				8D8756C7241FEF68000DBA40 /* TicketCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8D8756C92420D217000DBA40 /* unit */ = {
+			isa = PBXGroup;
+			children = (
+				8D8756CA2420D227000DBA40 /* TicketCellTest.swift */,
+			);
+			path = unit;
+			sourceTree = "<group>";
+		};
+		8D8756CE2421079B000DBA40 /* factories */ = {
+			isa = PBXGroup;
+			children = (
+				8D8756CF242107A6000DBA40 /* Factories.swift */,
+			);
+			path = factories;
+			sourceTree = "<group>";
+		};
+		8D8756D124210D3F000DBA40 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8D8756D224210D48000DBA40 /* Helpers.swift */,
+			);
+			path = helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +285,7 @@
 				8D87569E241F6622000DBA40 /* ViewController.swift in Sources */,
 				8D8756C3241F69E8000DBA40 /* Ticket.swift in Sources */,
 				8D8756C8241FEF68000DBA40 /* TicketCell.swift in Sources */,
+				8D8756CD2420D6D8000DBA40 /* Requester.swift in Sources */,
 				8D87569A241F6622000DBA40 /* AppDelegate.swift in Sources */,
 				8D87569C241F6622000DBA40 /* SceneDelegate.swift in Sources */,
 			);
@@ -258,7 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8756D0242107A6000DBA40 /* Factories.swift in Sources */,
 				8D8756BD241F66C1000DBA40 /* TicketsListViewControllerTest.swift in Sources */,
+				8D8756CB2420D227000DBA40 /* TicketCellTest.swift in Sources */,
+				8D8756D324210D48000DBA40 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

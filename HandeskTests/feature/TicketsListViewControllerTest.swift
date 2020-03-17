@@ -1,6 +1,7 @@
 import XCTest
 @testable import Handesk
 
+
 class TicketsListViewControllerTest: XCTestCase {
 
     override func setUp() {
@@ -77,11 +78,22 @@ class TicketsListViewControllerTest: XCTestCase {
         XCTAssertTrue(ticketCell is TicketCell)
     }
     
-    func instantiateStoryboardController<T:UIViewController>(_ storyboard:String) -> T? {
-        let storyBoard   = UIStoryboard(name: storyboard, bundle: nil)
-        let controller   = storyBoard.instantiateInitialViewController() as? T
-        controller?.loadView()
-        return controller
+    func test_ticket_cell_outlets_are_connected(){
+        //Arrange
+        let ticketsController:TicketsListViewController = instantiateStoryboardController("Tickets")!
+        ticketsController.tickets = [Ticket(title: "My first ticket")]
+        
+        //Act
+        let ticketCell = ticketsController.tableView(ticketsController.tableView, cellForRowAt:IndexPath(row:0, section:0)) as! TicketCell
+        
+        //Assert
+        XCTAssertNotNil(ticketCell.userLabel)
+        XCTAssertNotNil(ticketCell.titleLabel)
+        XCTAssertNotNil(ticketCell.bodyLabel)
+        XCTAssertNotNil(ticketCell.updatedAtLabel)
+        XCTAssertNotNil(ticketCell.statusView)
+        XCTAssertNotNil(ticketCell.avatarView)
+        XCTAssertNotNil(ticketCell.infoStackView)
     }
         
 }
