@@ -2,5 +2,5 @@ import Foundation
 
 struct Requester {
     let name:String
-    let email:String    
+    let email:Email
 }

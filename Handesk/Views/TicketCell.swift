@@ -18,8 +18,8 @@ class TicketCell : UITableViewCell {
         updatedAtLabel.text = Date(iso8061: ticket.updated_at)?.display
         statusView.backgroundColor = ticket.status.color
         infoStackView.setup(ticket)
-        
-        gravatar.email(ticket.requester.email).download { [weak self] image, error in
+                
+        ticket.requester.email.gravatar(gravatar) { [weak self] image, error in
             self?.avatarView.image = image
         }
     }
