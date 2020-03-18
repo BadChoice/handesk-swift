@@ -22,6 +22,8 @@
 		8D8756CD2420D6D8000DBA40 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756CC2420D6D8000DBA40 /* Requester.swift */; };
 		8D8756D0242107A6000DBA40 /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756CF242107A6000DBA40 /* Factories.swift */; };
 		8D8756D324210D48000DBA40 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756D224210D48000DBA40 /* Helpers.swift */; };
+		8DCB68532422176400483810 /* TicketInfoLegendViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB68522422176400483810 /* TicketInfoLegendViewTest.swift */; };
+		8DCB685524221D0D00483810 /* TicketInfoLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB685424221D0D00483810 /* TicketInfoLegendView.swift */; };
 		8DF9702424211E0200242861 /* DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702324211E0200242861 /* DateTest.swift */; };
 		8DF9702724211ED900242861 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702624211ED900242861 /* DateExtension.swift */; };
 		8DF9702924220BA000242861 /* TicketStatusTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702824220BA000242861 /* TicketStatusTest.swift */; };
@@ -57,6 +59,8 @@
 		8D8756CC2420D6D8000DBA40 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
 		8D8756CF242107A6000DBA40 /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
 		8D8756D224210D48000DBA40 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		8DCB68522422176400483810 /* TicketInfoLegendViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketInfoLegendViewTest.swift; sourceTree = "<group>"; };
+		8DCB685424221D0D00483810 /* TicketInfoLegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketInfoLegendView.swift; sourceTree = "<group>"; };
 		8DF9702324211E0200242861 /* DateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTest.swift; sourceTree = "<group>"; };
 		8DF9702624211ED900242861 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		8DF9702824220BA000242861 /* TicketStatusTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketStatusTest.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				8D8756C7241FEF68000DBA40 /* TicketCell.swift */,
+				8DCB685424221D0D00483810 /* TicketInfoLegendView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				8D8756CA2420D227000DBA40 /* TicketCellTest.swift */,
 				8DF9702324211E0200242861 /* DateTest.swift */,
 				8DF9702824220BA000242861 /* TicketStatusTest.swift */,
+				8DCB68522422176400483810 /* TicketInfoLegendViewTest.swift */,
 			);
 			path = unit;
 			sourceTree = "<group>";
@@ -300,6 +306,7 @@
 			files = (
 				8D8756C0241F68BD000DBA40 /* TicketsListViewController.swift in Sources */,
 				8DF9702724211ED900242861 /* DateExtension.swift in Sources */,
+				8DCB685524221D0D00483810 /* TicketInfoLegendView.swift in Sources */,
 				8D87569E241F6622000DBA40 /* ViewController.swift in Sources */,
 				8D8756C3241F69E8000DBA40 /* Ticket.swift in Sources */,
 				8D8756C8241FEF68000DBA40 /* TicketCell.swift in Sources */,
@@ -318,6 +325,7 @@
 				8DF9702424211E0200242861 /* DateTest.swift in Sources */,
 				8DF9702924220BA000242861 /* TicketStatusTest.swift in Sources */,
 				8D8756CB2420D227000DBA40 /* TicketCellTest.swift in Sources */,
+				8DCB68532422176400483810 /* TicketInfoLegendViewTest.swift in Sources */,
 				8D8756D324210D48000DBA40 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

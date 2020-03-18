@@ -8,7 +8,10 @@ struct Ticket {
         var color: UIColor { UIColor(named: "status-\(self)") ?? UIColor.white }
     }
     enum Priority{
-        case high
+        case low, normal, high, blocker
+        
+        var color: UIColor { UIColor(named: "priority-\(self)") ?? UIColor.white }
+        var initial:String { "\(self)".prefix(1).uppercased() }
     }
     
     let title:String
