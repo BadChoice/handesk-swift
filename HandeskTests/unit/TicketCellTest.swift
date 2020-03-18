@@ -16,6 +16,11 @@ class TicketCellTest: XCTestCase {
         let ticket    = Ticket(title: "The Ticket", body:"Body", requester:requester, updated_at:"2020-03-17T19:20:14+0000", status:.new, priority:.high, isBug:false, isEscalated:true)
         let cell      = makeTicketCell()
         
+        
+        let gravatar = Gravatar()
+        gravatar.imageDownloader = ImageDownloaderMock()
+        cell.gravatar = gravatar
+        
         cell.setup(ticket)
         
         XCTAssertEqual("The Ticket",                 cell.titleLabel.text)
@@ -23,7 +28,7 @@ class TicketCellTest: XCTestCase {
         XCTAssertEqual("Body",                       cell.bodyLabel.text)
         XCTAssertEqual("Tue, Mar 17 18:20",          cell.updatedAtLabel.text)
         XCTAssertEqual(UIColor(named:"status-new")!, cell.statusView.backgroundColor)
-        XCTAssertEqual(3,                            cell.infoStackView.arrangedSubviews.count)
+        XCTAssertEqual(2,                            cell.infoStackView.arrangedSubviews.count)
         XCTAssertNotNil(cell.avatarView.image)
     }
 

@@ -22,6 +22,10 @@
 		8D8756CD2420D6D8000DBA40 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756CC2420D6D8000DBA40 /* Requester.swift */; };
 		8D8756D0242107A6000DBA40 /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756CF242107A6000DBA40 /* Factories.swift */; };
 		8D8756D324210D48000DBA40 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756D224210D48000DBA40 /* Helpers.swift */; };
+		8DA484A3242279BC00A492EF /* ImageDownloaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA484A2242279BC00A492EF /* ImageDownloaderMock.swift */; };
+		8DA484A524227C0D00A492EF /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA484A424227C0D00A492EF /* ImageDownloader.swift */; };
+		8DA484A72422822B00A492EF /* ImageDownloaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA484A62422822B00A492EF /* ImageDownloaderTest.swift */; };
+		8DA484A9242289E900A492EF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA484A8242289E900A492EF /* Helpers.swift */; };
 		8DCB68532422176400483810 /* TicketInfoLegendViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB68522422176400483810 /* TicketInfoLegendViewTest.swift */; };
 		8DCB685524221D0D00483810 /* TicketInfoLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB685424221D0D00483810 /* TicketInfoLegendView.swift */; };
 		8DCB68572422486A00483810 /* GravatarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB68562422486A00483810 /* GravatarTest.swift */; };
@@ -61,6 +65,10 @@
 		8D8756CC2420D6D8000DBA40 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
 		8D8756CF242107A6000DBA40 /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
 		8D8756D224210D48000DBA40 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		8DA484A2242279BC00A492EF /* ImageDownloaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderMock.swift; sourceTree = "<group>"; };
+		8DA484A424227C0D00A492EF /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		8DA484A62422822B00A492EF /* ImageDownloaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTest.swift; sourceTree = "<group>"; };
+		8DA484A8242289E900A492EF /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		8DCB68522422176400483810 /* TicketInfoLegendViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketInfoLegendViewTest.swift; sourceTree = "<group>"; };
 		8DCB685424221D0D00483810 /* TicketInfoLegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketInfoLegendView.swift; sourceTree = "<group>"; };
 		8DCB68562422486A00483810 /* GravatarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravatarTest.swift; sourceTree = "<group>"; };
@@ -180,6 +188,7 @@
 				8DF9702824220BA000242861 /* TicketStatusTest.swift */,
 				8DCB68522422176400483810 /* TicketInfoLegendViewTest.swift */,
 				8DCB68562422486A00483810 /* GravatarTest.swift */,
+				8DA484A62422822B00A492EF /* ImageDownloaderTest.swift */,
 			);
 			path = unit;
 			sourceTree = "<group>";
@@ -196,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				8D8756D224210D48000DBA40 /* Helpers.swift */,
+				8DA484A2242279BC00A492EF /* ImageDownloaderMock.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -204,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				8DCB68592422498F00483810 /* Gravatar.swift */,
+				8DA484A424227C0D00A492EF /* ImageDownloader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -212,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				8DF9702624211ED900242861 /* DateExtension.swift */,
+				8DA484A8242289E900A492EF /* Helpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -324,6 +336,8 @@
 				8D87569E241F6622000DBA40 /* ViewController.swift in Sources */,
 				8D8756C3241F69E8000DBA40 /* Ticket.swift in Sources */,
 				8D8756C8241FEF68000DBA40 /* TicketCell.swift in Sources */,
+				8DA484A524227C0D00A492EF /* ImageDownloader.swift in Sources */,
+				8DA484A9242289E900A492EF /* Helpers.swift in Sources */,
 				8D8756CD2420D6D8000DBA40 /* Requester.swift in Sources */,
 				8DCB685A2422498F00483810 /* Gravatar.swift in Sources */,
 				8D87569A241F6622000DBA40 /* AppDelegate.swift in Sources */,
@@ -338,8 +352,10 @@
 				8D8756D0242107A6000DBA40 /* Factories.swift in Sources */,
 				8D8756BD241F66C1000DBA40 /* TicketsListViewControllerTest.swift in Sources */,
 				8DF9702424211E0200242861 /* DateTest.swift in Sources */,
+				8DA484A3242279BC00A492EF /* ImageDownloaderMock.swift in Sources */,
 				8DF9702924220BA000242861 /* TicketStatusTest.swift in Sources */,
 				8D8756CB2420D227000DBA40 /* TicketCellTest.swift in Sources */,
+				8DA484A72422822B00A492EF /* ImageDownloaderTest.swift in Sources */,
 				8DCB68572422486A00483810 /* GravatarTest.swift in Sources */,
 				8DCB68532422176400483810 /* TicketInfoLegendViewTest.swift in Sources */,
 				8D8756D324210D48000DBA40 /* Helpers.swift in Sources */,

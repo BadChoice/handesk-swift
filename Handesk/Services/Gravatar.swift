@@ -1,5 +1,6 @@
 import Foundation
 import CryptoKit
+import UIKit
 
 class Gravatar {
     
@@ -11,17 +12,26 @@ class Gravatar {
         case g, pg, r, x
     }
     
-    let email:String
+    var email:String!
     var extraParameters:[String] = []
     
-    init(_ email:String){
+    lazy var imageDownloader:ImageDownloader = { ImageDownloader() }()
+    
+    func email(_ email:String) -> Gravatar{
         self.email = Self.safeEmail(email)
+        return self
     }
     
     func url() -> String {
         let hash  = Self.hash(safeEmail: email)
         let query = buildQueryParameters()
         return "https://www.gravatar.com/avatar/\(hash)\(query)"
+    }
+    
+    func download(then:@escaping(_ image:UIImage?, _ error:String?)->Void){
+        imageDownloader.download(url()) {
+            then($0, $1)
+        }
     }
     
     private func buildQueryParameters() -> String {
