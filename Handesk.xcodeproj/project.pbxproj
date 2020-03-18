@@ -24,6 +24,8 @@
 		8D8756D324210D48000DBA40 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756D224210D48000DBA40 /* Helpers.swift */; };
 		8DCB68532422176400483810 /* TicketInfoLegendViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB68522422176400483810 /* TicketInfoLegendViewTest.swift */; };
 		8DCB685524221D0D00483810 /* TicketInfoLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB685424221D0D00483810 /* TicketInfoLegendView.swift */; };
+		8DCB68572422486A00483810 /* GravatarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB68562422486A00483810 /* GravatarTest.swift */; };
+		8DCB685A2422498F00483810 /* Gravatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB68592422498F00483810 /* Gravatar.swift */; };
 		8DF9702424211E0200242861 /* DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702324211E0200242861 /* DateTest.swift */; };
 		8DF9702724211ED900242861 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702624211ED900242861 /* DateExtension.swift */; };
 		8DF9702924220BA000242861 /* TicketStatusTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702824220BA000242861 /* TicketStatusTest.swift */; };
@@ -61,6 +63,8 @@
 		8D8756D224210D48000DBA40 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		8DCB68522422176400483810 /* TicketInfoLegendViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketInfoLegendViewTest.swift; sourceTree = "<group>"; };
 		8DCB685424221D0D00483810 /* TicketInfoLegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketInfoLegendView.swift; sourceTree = "<group>"; };
+		8DCB68562422486A00483810 /* GravatarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravatarTest.swift; sourceTree = "<group>"; };
+		8DCB68592422498F00483810 /* Gravatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gravatar.swift; sourceTree = "<group>"; };
 		8DF9702324211E0200242861 /* DateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTest.swift; sourceTree = "<group>"; };
 		8DF9702624211ED900242861 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		8DF9702824220BA000242861 /* TicketStatusTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketStatusTest.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 		8D875698241F6622000DBA40 /* Handesk */ = {
 			isa = PBXGroup;
 			children = (
+				8DCB68582422498400483810 /* Services */,
 				8DF9702524211ECD00242861 /* Helpers */,
 				8D8756C6241FEF5E000DBA40 /* Views */,
 				8D8756C1241F69DD000DBA40 /* Models */,
@@ -174,6 +179,7 @@
 				8DF9702324211E0200242861 /* DateTest.swift */,
 				8DF9702824220BA000242861 /* TicketStatusTest.swift */,
 				8DCB68522422176400483810 /* TicketInfoLegendViewTest.swift */,
+				8DCB68562422486A00483810 /* GravatarTest.swift */,
 			);
 			path = unit;
 			sourceTree = "<group>";
@@ -192,6 +198,14 @@
 				8D8756D224210D48000DBA40 /* Helpers.swift */,
 			);
 			path = helpers;
+			sourceTree = "<group>";
+		};
+		8DCB68582422498400483810 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8DCB68592422498F00483810 /* Gravatar.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		8DF9702524211ECD00242861 /* Helpers */ = {
@@ -311,6 +325,7 @@
 				8D8756C3241F69E8000DBA40 /* Ticket.swift in Sources */,
 				8D8756C8241FEF68000DBA40 /* TicketCell.swift in Sources */,
 				8D8756CD2420D6D8000DBA40 /* Requester.swift in Sources */,
+				8DCB685A2422498F00483810 /* Gravatar.swift in Sources */,
 				8D87569A241F6622000DBA40 /* AppDelegate.swift in Sources */,
 				8D87569C241F6622000DBA40 /* SceneDelegate.swift in Sources */,
 			);
@@ -325,6 +340,7 @@
 				8DF9702424211E0200242861 /* DateTest.swift in Sources */,
 				8DF9702924220BA000242861 /* TicketStatusTest.swift in Sources */,
 				8D8756CB2420D227000DBA40 /* TicketCellTest.swift in Sources */,
+				8DCB68572422486A00483810 /* GravatarTest.swift in Sources */,
 				8DCB68532422176400483810 /* TicketInfoLegendViewTest.swift in Sources */,
 				8D8756D324210D48000DBA40 /* Helpers.swift in Sources */,
 			);
