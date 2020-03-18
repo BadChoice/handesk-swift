@@ -1,9 +1,11 @@
-import Foundation
+import UIKit
 
 
 struct Ticket {
     enum Status {
-        case new
+        case new, open, pending, solved, closed, merged, spam
+        
+        var color: UIColor { UIColor(named: "status-\(self)") ?? UIColor.white }
     }
     enum Priority{
         case high

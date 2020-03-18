@@ -14,5 +14,6 @@ class TicketCell : UITableViewCell {
         titleLabel.text = ticket.title
         bodyLabel.text  = ticket.body
         updatedAtLabel.text = Date(iso8061: ticket.updated_at)?.display
+        statusView.backgroundColor = ticket.status.color
     }
 }

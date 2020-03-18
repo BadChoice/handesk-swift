@@ -18,12 +18,12 @@ class TicketCellTest: XCTestCase {
         
         cell.setup(ticket)
         
-        XCTAssertEqual("The Ticket",        cell.titleLabel.text)
-        XCTAssertEqual("Bruce Wayne",       cell.userLabel.text)
-        XCTAssertEqual("Body",              cell.bodyLabel.text)
-        XCTAssertEqual("Tue, Mar 17 18:20", cell.updatedAtLabel.text)
-        XCTAssertEqual(UIColor.green,       cell.statusView.backgroundColor)
-        XCTAssertEqual(3,                   cell.infoStackView.arrangedSubviews.count)
+        XCTAssertEqual("The Ticket",                 cell.titleLabel.text)
+        XCTAssertEqual("Bruce Wayne",                cell.userLabel.text)
+        XCTAssertEqual("Body",                       cell.bodyLabel.text)
+        XCTAssertEqual("Tue, Mar 17 18:20",          cell.updatedAtLabel.text)
+        XCTAssertEqual(UIColor(named:"status-new")!, cell.statusView.backgroundColor)
+        XCTAssertEqual(3,                            cell.infoStackView.arrangedSubviews.count)
         XCTAssertNotNil(cell.avatarView.image)
     }
 

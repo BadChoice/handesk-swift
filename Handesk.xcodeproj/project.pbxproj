@@ -24,6 +24,7 @@
 		8D8756D324210D48000DBA40 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8756D224210D48000DBA40 /* Helpers.swift */; };
 		8DF9702424211E0200242861 /* DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702324211E0200242861 /* DateTest.swift */; };
 		8DF9702724211ED900242861 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702624211ED900242861 /* DateExtension.swift */; };
+		8DF9702924220BA000242861 /* TicketStatusTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702824220BA000242861 /* TicketStatusTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		8D8756D224210D48000DBA40 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		8DF9702324211E0200242861 /* DateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTest.swift; sourceTree = "<group>"; };
 		8DF9702624211ED900242861 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		8DF9702824220BA000242861 /* TicketStatusTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketStatusTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				8D8756CA2420D227000DBA40 /* TicketCellTest.swift */,
 				8DF9702324211E0200242861 /* DateTest.swift */,
+				8DF9702824220BA000242861 /* TicketStatusTest.swift */,
 			);
 			path = unit;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				8D8756D0242107A6000DBA40 /* Factories.swift in Sources */,
 				8D8756BD241F66C1000DBA40 /* TicketsListViewControllerTest.swift in Sources */,
 				8DF9702424211E0200242861 /* DateTest.swift in Sources */,
+				8DF9702924220BA000242861 /* TicketStatusTest.swift in Sources */,
 				8D8756CB2420D227000DBA40 /* TicketCellTest.swift in Sources */,
 				8D8756D324210D48000DBA40 /* Helpers.swift in Sources */,
 			);
