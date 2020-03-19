@@ -1,6 +1,10 @@
 import UIKit
 
-class ImageDownloader{
+class ImageDownloader: Resolvable {
+    
+    required init(){
+        
+    }
     
     func download(_ url:String, then:@escaping(_ image:UIImage?, _ error:String?)->Void){
         guard let downloadUrl = URL(string: url) else {

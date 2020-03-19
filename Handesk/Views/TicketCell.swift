@@ -8,8 +8,6 @@ class TicketCell : UITableViewCell {
     @IBOutlet weak var statusView:UIView!
     @IBOutlet weak var avatarView:UIImageView!
     @IBOutlet weak var infoStackView:TicketInfoLegendView!
-    
-    lazy var gravatar:Gravatar = { Gravatar() }()
         
     func setup(_ ticket:Ticket){
         userLabel.text  = ticket.requester.name
@@ -19,7 +17,7 @@ class TicketCell : UITableViewCell {
         statusView.backgroundColor = ticket.status.color
         infoStackView.setup(ticket)
                 
-        ticket.requester.email.gravatar(gravatar) { [weak self] image, error in
+        ticket.requester.email.gravatar { [weak self] image, error in
             self?.avatarView.image = image
         }
     }

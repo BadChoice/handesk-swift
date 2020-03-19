@@ -15,11 +15,8 @@ class TicketCellTest: XCTestCase {
         let requester = Requester(name: "Bruce Wayne", email:"bruce@wayne.com")
         let ticket    = Ticket(title: "The Ticket", body:"Body", requester:requester, updated_at:"2020-03-17T19:20:14+0000", status:.new, priority:.high, isBug:false, isEscalated:true)
         let cell      = makeTicketCell()
-        
-        
-        let gravatar = Gravatar()
-        gravatar.imageDownloader = ImageDownloaderMock()
-        cell.gravatar = gravatar
+                
+        Container.shared.register(ImageDownloader.self, ImageDownloaderMock())
         
         cell.setup(ticket)
         

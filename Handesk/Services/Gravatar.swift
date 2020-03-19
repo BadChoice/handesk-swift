@@ -2,7 +2,7 @@ import Foundation
 import CryptoKit
 import UIKit
 
-class Gravatar {
+class Gravatar : Resolvable {
     
     enum Default : String{
         case notFound = "404", mp, identicon, monsterid, wavatar, retro, robohash, blank
@@ -15,7 +15,9 @@ class Gravatar {
     var email:String!
     var extraParameters:[String] = []
     
-    lazy var imageDownloader:ImageDownloader = { ImageDownloader() }()
+    lazy var imageDownloader:ImageDownloader = { app(ImageDownloader.self)! }()
+    
+    required init(){}
     
     func email(_ email:String) -> Gravatar{
         self.email = Self.safeEmail(email)

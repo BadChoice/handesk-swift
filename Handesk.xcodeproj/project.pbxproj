@@ -27,6 +27,8 @@
 		8DA484A72422822B00A492EF /* ImageDownloaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA484A62422822B00A492EF /* ImageDownloaderTest.swift */; };
 		8DA484A9242289E900A492EF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA484A8242289E900A492EF /* Helpers.swift */; };
 		8DA484AB242293EB00A492EF /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA484AA242293EB00A492EF /* Email.swift */; };
+		8DA484AD2423B60200A492EF /* ContainerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA484AC2423B60200A492EF /* ContainerTest.swift */; };
+		8DA484AF2423B78B00A492EF /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA484AE2423B78B00A492EF /* Container.swift */; };
 		8DCB68532422176400483810 /* TicketInfoLegendViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB68522422176400483810 /* TicketInfoLegendViewTest.swift */; };
 		8DCB685524221D0D00483810 /* TicketInfoLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB685424221D0D00483810 /* TicketInfoLegendView.swift */; };
 		8DCB68572422486A00483810 /* GravatarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB68562422486A00483810 /* GravatarTest.swift */; };
@@ -71,6 +73,8 @@
 		8DA484A62422822B00A492EF /* ImageDownloaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTest.swift; sourceTree = "<group>"; };
 		8DA484A8242289E900A492EF /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		8DA484AA242293EB00A492EF /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		8DA484AC2423B60200A492EF /* ContainerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTest.swift; sourceTree = "<group>"; };
+		8DA484AE2423B78B00A492EF /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		8DCB68522422176400483810 /* TicketInfoLegendViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketInfoLegendViewTest.swift; sourceTree = "<group>"; };
 		8DCB685424221D0D00483810 /* TicketInfoLegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketInfoLegendView.swift; sourceTree = "<group>"; };
 		8DCB68562422486A00483810 /* GravatarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravatarTest.swift; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 				8DCB68522422176400483810 /* TicketInfoLegendViewTest.swift */,
 				8DCB68562422486A00483810 /* GravatarTest.swift */,
 				8DA484A62422822B00A492EF /* ImageDownloaderTest.swift */,
+				8DA484AC2423B60200A492EF /* ContainerTest.swift */,
 			);
 			path = unit;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 		8DCB68582422498400483810 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8DA484AE2423B78B00A492EF /* Container.swift */,
 				8DCB68592422498F00483810 /* Gravatar.swift */,
 				8DA484A424227C0D00A492EF /* ImageDownloader.swift */,
 			);
@@ -344,6 +350,7 @@
 				8D8756CD2420D6D8000DBA40 /* Requester.swift in Sources */,
 				8DCB685A2422498F00483810 /* Gravatar.swift in Sources */,
 				8DA484AB242293EB00A492EF /* Email.swift in Sources */,
+				8DA484AF2423B78B00A492EF /* Container.swift in Sources */,
 				8D87569A241F6622000DBA40 /* AppDelegate.swift in Sources */,
 				8D87569C241F6622000DBA40 /* SceneDelegate.swift in Sources */,
 			);
@@ -362,6 +369,7 @@
 				8DA484A72422822B00A492EF /* ImageDownloaderTest.swift in Sources */,
 				8DCB68572422486A00483810 /* GravatarTest.swift in Sources */,
 				8DCB68532422176400483810 /* TicketInfoLegendViewTest.swift in Sources */,
+				8DA484AD2423B60200A492EF /* ContainerTest.swift in Sources */,
 				8D8756D324210D48000DBA40 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

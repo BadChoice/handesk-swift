@@ -51,8 +51,8 @@ class GravatarTest: XCTestCase {
         let expectation = XCTestExpectation(description: "Image download")
         
         let imageDownloader      = ImageDownloaderMock()
+        Container.shared.register(ImageDownloader.self, imageDownloader)
         let gravatar             = Gravatar().email("MyEmailAddress@example.com ")
-        gravatar.imageDownloader = imageDownloader
         
         gravatar.download { image, error in
             XCTAssertNotNil(image)
@@ -68,8 +68,8 @@ class GravatarTest: XCTestCase {
         let expectation = XCTestExpectation(description: "Image download")
         
         let imageDownloader      = ImageDownloaderMock(shouldFailWith:"Image can't be downloaded" )
+        Container.shared.register(ImageDownloader.self, imageDownloader)
         let gravatar             = Gravatar().email("MyEmailAddress@example.com ")
-        gravatar.imageDownloader = imageDownloader
         
         gravatar.download { image, error in
             XCTAssertNil(image)
