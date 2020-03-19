@@ -34,3 +34,13 @@ class Container {
         return type.init()
     }
 }
+
+@propertyWrapper
+struct Inject<Value:Resolvable>{
+    var wrappedValue: Value?
+    
+    init() {
+        wrappedValue = app(Value.self)
+    }
+}
+

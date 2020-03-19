@@ -27,5 +27,16 @@ class ContainerTest: XCTestCase {
         XCTAssertTrue(resolved === mock)
     }
     
+    func test_can_autoinject_a_depencency(){
+        Container.shared.register(ImageDownloader.self, ImageDownloaderMock.self)
+        struct TestClass {
+            @Inject var imageDownloader:ImageDownloader!
+        }
+        
+        let image = TestClass()
+        XCTAssertTrue(image.imageDownloader is ImageDownloaderMock)
+        
+    }
+    
 }
 

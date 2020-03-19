@@ -15,7 +15,7 @@ class Gravatar : Resolvable {
     var email:String!
     var extraParameters:[String] = []
     
-    lazy var imageDownloader:ImageDownloader = { app(ImageDownloader.self)! }()
+    @Inject var imageDownloader:ImageDownloader!
     
     required init(){}
     
