@@ -3,14 +3,6 @@ import XCTest
 
 
 class TicketsListViewControllerTest: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
     
     func test_the_tickets_list_storyboard_resolves_with_right_controller(){
         //Act
@@ -44,14 +36,6 @@ class TicketsListViewControllerTest: XCTestCase {
     }
     
     func test_cells_are_dequeued(){
-        class UITableViewMock : UITableView {
-            var dequeuedIdentifiers:[String] = []
-            override func dequeueReusableCell(withIdentifier identifier: String) -> UITableViewCell? {
-                dequeuedIdentifiers.append(identifier)
-                return super.dequeueReusableCell(withIdentifier: identifier)
-            }
-        }
-        
         // Arrange
         let vc      = TicketsListViewController()
         let tickets = [Ticket(title: "My first ticket")]
@@ -94,6 +78,46 @@ class TicketsListViewControllerTest: XCTestCase {
         XCTAssertNotNil(ticketCell.statusView)
         XCTAssertNotNil(ticketCell.avatarView)
         XCTAssertNotNil(ticketCell.infoStackView)
+    }
+    
+    
+    func test_it_can_fetch_tickets(){
+        // Arrange
+        let ticketsProvider = TicketsProviderMock([
+            Ticket(title: "My first ticket"),
+            Ticket(title: "My second ticket"),
+            Ticket(title: "My third ticket")
+        ])
+        
+        let tableViewMock  = UITableViewMock()
+        
+        let vc             = TicketsListViewController()
+        vc.ticketsProvider = ticketsProvider
+        vc.tableView       = tableViewMock
+        
+        // Act
+        vc.viewDidLoad()
+
+        // Assert
+        XCTAssertTrue(ticketsProvider.didFetchTheTickets)
+        XCTAssertEqual(1, tableViewMock.didReloadDataCallCount)
+        XCTAssertEqual(vc.tickets[0], ticketsProvider.tickets[0])
+        XCTAssertEqual(vc.tickets[1], ticketsProvider.tickets[1])
+        XCTAssertEqual(vc.tickets[2], ticketsProvider.tickets[2])
+    }
+    
+    func test_table_view_is_reloaded_when_tickets_are_fetched(){        
+        let tableViewMock  = UITableViewMock()
+        
+        let vc             = TicketsListViewController()
+        vc.tableView       = tableViewMock
+        XCTAssertEqual(0, tableViewMock.didReloadDataCallCount)
+        
+        // Act
+        vc.onTicketsFetched([])
+
+        // Assert
+        XCTAssertEqual(1, tableViewMock.didReloadDataCallCount)
     }
         
 }

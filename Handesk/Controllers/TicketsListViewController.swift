@@ -2,7 +2,25 @@ import UIKit
 
 class TicketsListViewController : UIViewController, UITableViewDataSource {
     var tickets:[Ticket]!
+    var ticketsProvider:TicketsProvider!
+    
     @IBOutlet weak var tableView:UITableView!
+    
+    
+    override func viewDidLoad() {
+        fetchTickets()
+    }
+
+    func fetchTickets(){
+        ticketsProvider.fetch { [weak self] in
+            self?.onTicketsFetched($0)
+        }
+    }
+
+    func onTicketsFetched(_ tickets:[Ticket]){
+        self.tickets = tickets
+        tableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tickets.count

@@ -1,12 +1,14 @@
 import UIKit
 
 
-struct Ticket {
+struct Ticket: Equatable {
+        
     enum Status {
         case new, open, pending, solved, closed, merged, spam
         
         var color: UIColor { UIColor(named: "status-\(self)") ?? UIColor.white }
     }
+    
     enum Priority{
         case low, normal, high, blocker
         
@@ -22,4 +24,8 @@ struct Ticket {
     let priority:Priority
     let isBug:Bool
     let isEscalated:Bool
+    
+    static func == (lhs: Ticket, rhs: Ticket) -> Bool {
+        lhs.title == rhs.title
+    }
 }

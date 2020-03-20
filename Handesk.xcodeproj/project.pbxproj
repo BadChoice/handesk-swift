@@ -33,6 +33,10 @@
 		8DCB685524221D0D00483810 /* TicketInfoLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB685424221D0D00483810 /* TicketInfoLegendView.swift */; };
 		8DCB68572422486A00483810 /* GravatarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB68562422486A00483810 /* GravatarTest.swift */; };
 		8DCB685A2422498F00483810 /* Gravatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB68592422498F00483810 /* Gravatar.swift */; };
+		8DD4837E2424C12800501BA5 /* TicketsProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4837D2424C12800501BA5 /* TicketsProviderMock.swift */; };
+		8DD483802424C59500501BA5 /* TicketsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4837F2424C59500501BA5 /* TicketsProvider.swift */; };
+		8DD483842424C9EA00501BA5 /* TicketsProviderMockTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD483832424C9EA00501BA5 /* TicketsProviderMockTest.swift */; };
+		8DD483862424D1A000501BA5 /* UITableViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD483852424D1A000501BA5 /* UITableViewMock.swift */; };
 		8DF9702424211E0200242861 /* DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702324211E0200242861 /* DateTest.swift */; };
 		8DF9702724211ED900242861 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702624211ED900242861 /* DateExtension.swift */; };
 		8DF9702924220BA000242861 /* TicketStatusTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702824220BA000242861 /* TicketStatusTest.swift */; };
@@ -79,6 +83,10 @@
 		8DCB685424221D0D00483810 /* TicketInfoLegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketInfoLegendView.swift; sourceTree = "<group>"; };
 		8DCB68562422486A00483810 /* GravatarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravatarTest.swift; sourceTree = "<group>"; };
 		8DCB68592422498F00483810 /* Gravatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gravatar.swift; sourceTree = "<group>"; };
+		8DD4837D2424C12800501BA5 /* TicketsProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsProviderMock.swift; sourceTree = "<group>"; };
+		8DD4837F2424C59500501BA5 /* TicketsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsProvider.swift; sourceTree = "<group>"; };
+		8DD483832424C9EA00501BA5 /* TicketsProviderMockTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsProviderMockTest.swift; sourceTree = "<group>"; };
+		8DD483852424D1A000501BA5 /* UITableViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewMock.swift; sourceTree = "<group>"; };
 		8DF9702324211E0200242861 /* DateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTest.swift; sourceTree = "<group>"; };
 		8DF9702624211ED900242861 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		8DF9702824220BA000242861 /* TicketStatusTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketStatusTest.swift; sourceTree = "<group>"; };
@@ -142,6 +150,7 @@
 		8D8756AF241F6625000DBA40 /* HandeskTests */ = {
 			isa = PBXGroup;
 			children = (
+				8DD4837C2424C11900501BA5 /* mocks */,
 				8D8756D124210D3F000DBA40 /* helpers */,
 				8D8756CE2421079B000DBA40 /* factories */,
 				8D8756C92420D217000DBA40 /* unit */,
@@ -197,6 +206,7 @@
 				8DCB68562422486A00483810 /* GravatarTest.swift */,
 				8DA484A62422822B00A492EF /* ImageDownloaderTest.swift */,
 				8DA484AC2423B60200A492EF /* ContainerTest.swift */,
+				8DD483832424C9EA00501BA5 /* TicketsProviderMockTest.swift */,
 			);
 			path = unit;
 			sourceTree = "<group>";
@@ -224,8 +234,18 @@
 				8DA484AE2423B78B00A492EF /* Container.swift */,
 				8DCB68592422498F00483810 /* Gravatar.swift */,
 				8DA484A424227C0D00A492EF /* ImageDownloader.swift */,
+				8DD4837F2424C59500501BA5 /* TicketsProvider.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8DD4837C2424C11900501BA5 /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8DD4837D2424C12800501BA5 /* TicketsProviderMock.swift */,
+				8DD483852424D1A000501BA5 /* UITableViewMock.swift */,
+			);
+			path = mocks;
 			sourceTree = "<group>";
 		};
 		8DF9702524211ECD00242861 /* Helpers */ = {
@@ -350,6 +370,7 @@
 				8D8756CD2420D6D8000DBA40 /* Requester.swift in Sources */,
 				8DCB685A2422498F00483810 /* Gravatar.swift in Sources */,
 				8DA484AB242293EB00A492EF /* Email.swift in Sources */,
+				8DD483802424C59500501BA5 /* TicketsProvider.swift in Sources */,
 				8DA484AF2423B78B00A492EF /* Container.swift in Sources */,
 				8D87569A241F6622000DBA40 /* AppDelegate.swift in Sources */,
 				8D87569C241F6622000DBA40 /* SceneDelegate.swift in Sources */,
@@ -360,15 +381,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD4837E2424C12800501BA5 /* TicketsProviderMock.swift in Sources */,
 				8D8756D0242107A6000DBA40 /* Factories.swift in Sources */,
 				8D8756BD241F66C1000DBA40 /* TicketsListViewControllerTest.swift in Sources */,
 				8DF9702424211E0200242861 /* DateTest.swift in Sources */,
 				8DA484A3242279BC00A492EF /* ImageDownloaderMock.swift in Sources */,
 				8DF9702924220BA000242861 /* TicketStatusTest.swift in Sources */,
 				8D8756CB2420D227000DBA40 /* TicketCellTest.swift in Sources */,
+				8DD483862424D1A000501BA5 /* UITableViewMock.swift in Sources */,
 				8DA484A72422822B00A492EF /* ImageDownloaderTest.swift in Sources */,
 				8DCB68572422486A00483810 /* GravatarTest.swift in Sources */,
 				8DCB68532422176400483810 /* TicketInfoLegendViewTest.swift in Sources */,
+				8DD483842424C9EA00501BA5 /* TicketsProviderMockTest.swift in Sources */,
 				8DA484AD2423B60200A492EF /* ContainerTest.swift in Sources */,
 				8D8756D324210D48000DBA40 /* Helpers.swift in Sources */,
 			);
