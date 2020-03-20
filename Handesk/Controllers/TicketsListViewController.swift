@@ -2,13 +2,22 @@ import UIKit
 
 class TicketsListViewController : UIViewController, UITableViewDataSource {
     var tickets:[Ticket]!
-    var ticketsProvider:TicketsProvider!
+    lazy var ticketsProvider:TicketsProvider! = { TicketsProvider() }()
+    
+    var refreshControl:UIRefreshControl!
     
     @IBOutlet weak var tableView:UITableView!
     
     
     override func viewDidLoad() {
         fetchTickets()
+        setupPullToRefresh()
+    }
+    
+    func setupPullToRefresh(){
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(onPulledToRefresh), for: .valueChanged)
+        tableView.refreshControl = refreshControl
     }
 
     func fetchTickets(){
@@ -16,10 +25,15 @@ class TicketsListViewController : UIViewController, UITableViewDataSource {
             self?.onTicketsFetched($0)
         }
     }
+    
+    @objc func onPulledToRefresh(){
+        fetchTickets()
+    }
 
     func onTicketsFetched(_ tickets:[Ticket]){
         self.tickets = tickets
         tableView.reloadData()
+        refreshControl?.endRefreshing()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

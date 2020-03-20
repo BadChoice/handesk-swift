@@ -1,6 +1,6 @@
 import Foundation
 
-class TicketsProvider {
+class TicketsProvider {    
     func fetch(then:(_ tickets:[Ticket])->Void){
     }
 }

@@ -119,5 +119,65 @@ class TicketsListViewControllerTest: XCTestCase {
         // Assert
         XCTAssertEqual(1, tableViewMock.didReloadDataCallCount)
     }
+    
+    func test_can_pull_to_refresh(){
+        //Arrange
+        let vc:TicketsListViewController = instantiateStoryboardController("Tickets")!
+        
+        //Act
+        vc.viewDidLoad()
+        
+        //Assert
+        XCTAssertNotNil(vc.refreshControl)
+        XCTAssertTrue  (vc.tableView.subviews.contains(vc.refreshControl))
+        
+        XCTAssertEqual (1, vc.refreshControl.actions(forTarget: vc, forControlEvent: .valueChanged)!.count)
+        XCTAssertEqual ("onPulledToRefresh", vc.refreshControl.actions(forTarget:vc, forControlEvent:.valueChanged)?.first)
+    }
+    
+    func test_pulling_to_refresh_updates_the_tickets(){
+        class UIRefreshControlMock: UIRefreshControl {
+            var didEndRefreshing = false
+            override func endRefreshing() {
+                didEndRefreshing = true
+                super.endRefreshing()
+            }
+        }
+        
+        //Arrange
+        let initialTicketsProvider = TicketsProviderMock([
+            Ticket(title: "First ticket"),
+            Ticket(title: "Second ticket"),
+        ])
+        
+        let secondTicketsProvider = TicketsProviderMock([
+            Ticket(title: "First ticket"),
+            Ticket(title: "Second ticket"),
+            Ticket(title: "Third ticket"),
+        ])
+        
+        let tableView       = UITableViewMock()
+        let refreshControl  = UIRefreshControlMock()
+        
+        let vc:TicketsListViewController = instantiateStoryboardController("Tickets")!
+        vc.ticketsProvider  = initialTicketsProvider
+        vc.tableView        = tableView
+        vc.refreshControl   = refreshControl
+        
+        vc.viewDidLoad()
+        
+        XCTAssertEqual(2, vc.tickets.count)
+        XCTAssertEqual(1, tableView.didReloadDataCallCount)
+        
+        //Act
+        vc.ticketsProvider  = secondTicketsProvider
+        vc.onPulledToRefresh()
+        
+
+        //Assert
+        XCTAssertEqual(3, vc.tickets.count)
+        XCTAssertEqual(2, tableView.didReloadDataCallCount)
+        XCTAssertTrue(refreshControl.didEndRefreshing)
+    }
         
 }
