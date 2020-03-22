@@ -1,6 +1,6 @@
 import Foundation
 
-struct Requester : Author {
+struct Agent : Author {
     let name:String
     let email:Email
 }

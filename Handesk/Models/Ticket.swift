@@ -24,6 +24,7 @@ struct Ticket: Equatable {
     let priority:Priority
     let isBug:Bool
     let isEscalated:Bool
+    var comments:[Comment]?
     
     static func == (lhs: Ticket, rhs: Ticket) -> Bool {
         lhs.title == rhs.title
