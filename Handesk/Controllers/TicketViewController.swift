@@ -5,10 +5,11 @@ class TicketViewController : UIViewController {
     @IBOutlet weak var tableView:UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        TicketHeaderCell()
+        tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath)
+        //tableView.dequeue("header"TicketHeaderCell()
     }
 }

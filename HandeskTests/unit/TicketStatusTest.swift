@@ -3,12 +3,6 @@ import XCTest
 
 class TicketStatusTest: XCTestCase {
 
-    override func setUp() {
-    }
-
-    override func tearDown() {
-    }
-
     func test_status_can_have_a_color(){
         XCTAssertEqual(UIColor(named:"status-new")!, Ticket.Status.new.color)
         XCTAssertEqual(UIColor(named:"status-open")!, Ticket.Status.open.color)

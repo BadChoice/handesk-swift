@@ -1,10 +1,11 @@
 import UIKit
 
-class TicketHeaderCell : UITableViewCell {
-    @IBOutlet weak var titleLabel:UILabel!
-    @IBOutlet weak var userLabel:UILabel!
+class TicketHeaderCell : TicketCell {
     @IBOutlet weak var createdAtLabel:UILabel!
-    @IBOutlet weak var statusView:UIView!
-    @IBOutlet weak var infoStackView:UIStackView!
-    @IBOutlet weak var avatarView:UIImageView!
+    
+    override func setup(_ ticket:Ticket){
+        super.setup(ticket)
+        createdAtLabel.text = Date(iso8061: ticket.created_at)?.display
+    }
 }
+

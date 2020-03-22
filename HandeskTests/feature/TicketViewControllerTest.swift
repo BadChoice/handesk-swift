@@ -8,18 +8,16 @@ class TicketViewControllerTest: XCTestCase {
         let requester   = Requester(name: "Bruce Wayne",  email:"bruce@wayne.com")
         let agent       = Agent    (name: "Dick Grayson", email:"dick@wayne.com")
         
-        var ticket      = Ticket(title: "The Ticket", body:"Body", requester:requester, updated_at:"2020-03-17T19:20:14+0000", status:.new, priority:.high, isBug:false, isEscalated:true)
+        var ticket      = Ticket(title: "The Ticket", body:"Body", requester:requester, created_at:"2020-03-17T17:20:14+0000", updated_at:"2020-03-17T19:20:14+0000", status:.new, priority:.high, bug:false, escalated:true)
         
         ticket.comments = [
             Comment(requester: requester, isPrivate:false, body:"Non private comment body", updated_at:"2020-03-17T20:20:14+0000"),
             Comment(requester: agent,     isPrivate:true, body:"Private comment body", updated_at:"2020-03-17T20:50:14+0000")
         ]
         
-        let vc        = TicketViewController()
-        let tableView = UITableViewMock()
+        let vc:TicketViewController = instantiateStoryboardController("Tickets", "show")!
         
         //Act
-        vc.tableView = tableView
         vc.ticket    = ticket;
         
         //Assert
@@ -28,7 +26,7 @@ class TicketViewControllerTest: XCTestCase {
         let headerCell = vc.tableView(vc.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as! TicketHeaderCell
         XCTAssertEqual("The Ticket",                 headerCell.titleLabel.text)
         XCTAssertEqual("Bruce Wayne",                headerCell.userLabel.text)
-        XCTAssertEqual("Tue, Mar 17 18:20",          headerCell.createdAtLabel.text)
+        XCTAssertEqual("Tue, Mar 17 16:20",          headerCell.createdAtLabel.text)
         XCTAssertEqual(UIColor(named:"status-new")!, headerCell.statusView.backgroundColor)
         XCTAssertEqual(1,                            headerCell.infoStackView.arrangedSubviews.count)
         XCTAssertNotNil(headerCell.avatarView.image)

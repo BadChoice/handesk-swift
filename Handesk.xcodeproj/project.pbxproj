@@ -46,6 +46,7 @@
 		BB094ACC24275B4300F1C9F2 /* TicketHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB094ACB24275B4300F1C9F2 /* TicketHeaderCell.swift */; };
 		BB094ACE24275BD300F1C9F2 /* TicketInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB094ACD24275BD300F1C9F2 /* TicketInfoCell.swift */; };
 		BB094AD024275C0100F1C9F2 /* TicketCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB094ACF24275C0100F1C9F2 /* TicketCommentCell.swift */; };
+		BB094AD224279D0C00F1C9F2 /* TicketHeaderCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB094AD124279D0C00F1C9F2 /* TicketHeaderCellTest.swift */; };
 		BB9A5BC7242667E300FEB0DE /* TicketViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9A5BC6242667E300FEB0DE /* TicketViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		BB094ACB24275B4300F1C9F2 /* TicketHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketHeaderCell.swift; sourceTree = "<group>"; };
 		BB094ACD24275BD300F1C9F2 /* TicketInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketInfoCell.swift; sourceTree = "<group>"; };
 		BB094ACF24275C0100F1C9F2 /* TicketCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCommentCell.swift; sourceTree = "<group>"; };
+		BB094AD124279D0C00F1C9F2 /* TicketHeaderCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketHeaderCellTest.swift; sourceTree = "<group>"; };
 		BB9A5BC6242667E300FEB0DE /* TicketViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewControllerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,6 +230,7 @@
 				8DA484A62422822B00A492EF /* ImageDownloaderTest.swift */,
 				8DA484AC2423B60200A492EF /* ContainerTest.swift */,
 				8DD483832424C9EA00501BA5 /* TicketsProviderMockTest.swift */,
+				BB094AD124279D0C00F1C9F2 /* TicketHeaderCellTest.swift */,
 			);
 			path = unit;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 			files = (
 				8DD4837E2424C12800501BA5 /* TicketsProviderMock.swift in Sources */,
 				8D8756D0242107A6000DBA40 /* Factories.swift in Sources */,
+				BB094AD224279D0C00F1C9F2 /* TicketHeaderCellTest.swift in Sources */,
 				8D8756BD241F66C1000DBA40 /* TicketsListViewControllerTest.swift in Sources */,
 				8DF9702424211E0200242861 /* DateTest.swift in Sources */,
 				8DA484A3242279BC00A492EF /* ImageDownloaderMock.swift in Sources */,

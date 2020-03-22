@@ -19,6 +19,7 @@ struct Ticket: Equatable {
     let title:String
     let body:String
     let requester:Requester
+    let created_at:String
     let updated_at:String
     let status:Status
     let priority:Priority
