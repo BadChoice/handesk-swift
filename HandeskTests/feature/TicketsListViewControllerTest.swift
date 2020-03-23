@@ -11,6 +11,7 @@ class TicketsListViewControllerTest: XCTestCase {
         //Assert
         XCTAssertNotNil(ticketsController)
         XCTAssertNotNil(ticketsController.tableView)
+        XCTAssertNotNil(ticketsController.tableView.dataSource)
     }
 
     func test_we_can_list_the_tickets()
@@ -178,6 +179,41 @@ class TicketsListViewControllerTest: XCTestCase {
         XCTAssertEqual(3, vc.tickets.count)
         XCTAssertEqual(2, tableView.didReloadDataCallCount)
         XCTAssertTrue(refreshControl.didEndRefreshing)
+    }
+    
+    func test_it_can_show_the_ticket_controller(){
+        //Arrange
+        let nav = instantiateStoryboardController("Tickets", "nav")!
+        let vc:TicketsListViewController = nav.children.first as! TicketsListViewController
+        disableSegueAnimations(vc, segueIdentifier:"tickets.show")
+        //Act
+        vc.performSegue(withIdentifier: "tickets.show", sender: nil)
+        
+        //Assert
+        let topVc = vc.navigationController?.topViewController
+        XCTAssertTrue(topVc is TicketViewController)
+    }
+    
+    func test_pressing_a_cell_shows_the_right_ticket_into_the_new_controller(){
+        let nav = instantiateStoryboardController("Tickets", "nav")!
+        let vc:TicketsListViewController = nav.children.first as! TicketsListViewController
+        disableSegueAnimations(vc, segueIdentifier:"tickets.show")
+        
+        XCTAssertNotNil(nav.view)
+        XCTAssertNotNil(vc.view)
+        
+        let theTicket = Ticket(title: "Second ticket")
+        vc.tickets = [
+            Ticket(title: "First ticket"),
+            theTicket,
+            Ticket(title: "Third ticket")
+        ]
+        
+        perfomCellSegue(controller: vc, identifier: "tickets.show", from: vc.tableView, at: IndexPath(row: 1, section: 0))        
+        
+        let topVc = vc.navigationController?.topViewController as? TicketViewController
+        XCTAssertEqual(theTicket, topVc?.ticket)
+        
     }
         
 }

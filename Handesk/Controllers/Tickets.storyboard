@@ -7,6 +7,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="jyL-RD-RJB">
+            <objects>
+                <navigationController storyboardIdentifier="nav" id="NTM-NG-oey" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WZG-Dx-cKw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="njz-96-d8Z" kind="relationship" relationship="rootViewController" id="4tf-PC-4Gm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xDZ-O1-Tye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-748" y="89"/>
+        </scene>
         <!--Tickets List View Controller-->
         <scene sceneID="3jY-Us-0n8">
             <objects>
@@ -91,14 +107,19 @@
                                             <outlet property="titleLabel" destination="r3Y-43-RHl" id="d8M-C6-jr8"/>
                                             <outlet property="updatedAtLabel" destination="JNh-SJ-XYW" id="DDI-ZF-5Sq"/>
                                             <outlet property="userLabel" destination="VQT-B5-kyT" id="we6-vr-NmZ"/>
+                                            <segue destination="Z6w-NB-oTf" kind="show" identifier="tickets.show" id="diU-Hg-rJB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="njz-96-d8Z" id="HDY-HL-TPb"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="sY5-kI-Sb3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0oA-Im-03q"/>
                     <connections>
                         <outlet property="tableView" destination="bFb-Am-kJA" id="aEF-XI-qW2"/>
                     </connections>
@@ -116,7 +137,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hvu-tB-935">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="139" id="nPK-Ya-rY1" customClass="TicketHeaderCell" customModule="Handesk" customModuleProvider="target">
@@ -305,6 +326,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bF3-aG-He6"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zJt-Lx-O15"/>
                     <connections>
                         <outlet property="tableView" destination="hvu-tB-935" id="KYO-U9-4Zr"/>
                     </connections>

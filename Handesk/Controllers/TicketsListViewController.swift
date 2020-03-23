@@ -12,6 +12,7 @@ class TicketsListViewController : UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         fetchTickets()
         setupPullToRefresh()
+        tableView.dataSource = self
     }
     
     func setupPullToRefresh(){
@@ -36,6 +37,7 @@ class TicketsListViewController : UIViewController, UITableViewDataSource {
         refreshControl?.endRefreshing()
     }
     
+    //MARK: Datasource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tickets.count
     }
@@ -44,5 +46,13 @@ class TicketsListViewController : UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .default, reuseIdentifier: "cell")
         cell.textLabel!.text = tickets[indexPath.row].title
         return cell
+    }
+    
+    //MARK: Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let cell = sender as? UITableViewCell else { return }
+        let vc        = segue.destination as! TicketViewController
+        let indexPath = tableView.indexPath(for: cell)!
+        vc.ticket     = tickets[indexPath.row]
     }
 }

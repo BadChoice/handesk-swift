@@ -15,6 +15,12 @@ func instantiateStoryboardController<T:UIViewController>(_ storyboard:String, _ 
     return controller
 }
 
+func disableSegueAnimations(_ controller:UIViewController, segueIdentifier:String){
+    (controller.value(forKey: "storyboardSegueTemplates") as! [NSObject]).first {
+        ($0.value(forKey: "identifier") as! String) == segueIdentifier
+    }?.setValue(false, forKey: "animates")
+}
+
 func makeTicketCell() -> TicketCell {
     let vc:TicketsListViewController = instantiateStoryboardController("Tickets")!
     vc.tickets = [Ticket(title: "My first ticket")]
@@ -38,5 +44,12 @@ func makeTicketCommentCell() -> TicketCommentCell {
     let vc:TicketViewController = instantiateStoryboardController("Tickets", "show")!
     vc.ticket = Ticket(title: "My first ticket")
     return vc.tableView(vc.tableView, cellForRowAt: IndexPath(row: 0, section: 1)) as! TicketCommentCell
+}
+
+
+func perfomCellSegue(controller:UIViewController, identifier:String, from tableView:UITableView, at indexPath:IndexPath){
+    tableView.scrollToRow(at: indexPath, at: .middle, animated: false)
+    let cell = tableView.cellForRow(at: indexPath)
+    controller.performSegue(withIdentifier: identifier, sender: cell)
 }
 
