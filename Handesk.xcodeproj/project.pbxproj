@@ -41,6 +41,7 @@
 		8DD4838A2428B82600501BA5 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD483892428B82600501BA5 /* Team.swift */; };
 		8DD4838C2428BC4C00501BA5 /* TicketCommentCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4838B2428BC4C00501BA5 /* TicketCommentCellTest.swift */; };
 		8DD4838E2428C50B00501BA5 /* TicketTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4838D2428C50B00501BA5 /* TicketTest.swift */; };
+		8DD48390242927CB00501BA5 /* CellFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4838F242927CB00501BA5 /* CellFactories.swift */; };
 		8DF9702424211E0200242861 /* DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702324211E0200242861 /* DateTest.swift */; };
 		8DF9702724211ED900242861 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702624211ED900242861 /* DateExtension.swift */; };
 		8DF9702924220BA000242861 /* TicketStatusTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702824220BA000242861 /* TicketStatusTest.swift */; };
@@ -103,6 +104,7 @@
 		8DD483892428B82600501BA5 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		8DD4838B2428BC4C00501BA5 /* TicketCommentCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCommentCellTest.swift; sourceTree = "<group>"; };
 		8DD4838D2428C50B00501BA5 /* TicketTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTest.swift; sourceTree = "<group>"; };
+		8DD4838F242927CB00501BA5 /* CellFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFactories.swift; sourceTree = "<group>"; };
 		8DF9702324211E0200242861 /* DateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTest.swift; sourceTree = "<group>"; };
 		8DF9702624211ED900242861 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		8DF9702824220BA000242861 /* TicketStatusTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketStatusTest.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				8D8756CF242107A6000DBA40 /* Factories.swift */,
+				8DD4838F242927CB00501BA5 /* CellFactories.swift */,
 			);
 			path = factories;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				8D8756D0242107A6000DBA40 /* Factories.swift in Sources */,
 				BB094AD224279D0C00F1C9F2 /* TicketHeaderCellTest.swift in Sources */,
 				8D8756BD241F66C1000DBA40 /* TicketsListViewControllerTest.swift in Sources */,
+				8DD48390242927CB00501BA5 /* CellFactories.swift in Sources */,
 				8DF9702424211E0200242861 /* DateTest.swift in Sources */,
 				8DA484A3242279BC00A492EF /* ImageDownloaderMock.swift in Sources */,
 				BB9A5BC7242667E300FEB0DE /* TicketViewControllerTest.swift in Sources */,

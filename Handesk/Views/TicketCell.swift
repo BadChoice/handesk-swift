@@ -9,7 +9,8 @@ class TicketCell : UITableViewCell {
     @IBOutlet weak var avatarView:UIImageView!
     @IBOutlet weak var infoStackView:TicketInfoLegendView!
         
-    func setup(_ ticket:Ticket){
+    @discardableResult
+    func setup(_ ticket:Ticket) -> TicketCell{
         userLabel.text      = ticket.requester.name
         titleLabel.text     = ticket.title
         bodyLabel?.text     = ticket.body
@@ -20,5 +21,6 @@ class TicketCell : UITableViewCell {
         ticket.requester.email.gravatar { [weak self] image, error in
             self?.avatarView.image = image
         }
+        return self
     }
 }

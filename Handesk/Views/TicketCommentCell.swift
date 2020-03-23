@@ -7,7 +7,8 @@ class TicketCommentCell : UITableViewCell
     @IBOutlet weak var bodyLabel:UILabel!
     @IBOutlet weak var avatarView:UIImageView!
     
-    func setup(_ comment:Comment){
+    @discardableResult
+    func setup(_ comment:Comment) -> TicketCommentCell{
         authorLabel.text    = comment.requester.name
         createdAtLabel.text = Date(iso8061: comment.created_at)?.display
         bodyLabel.text     = comment.body
@@ -15,5 +16,6 @@ class TicketCommentCell : UITableViewCell
         comment.requester.email.gravatar { [weak self] image, error in
             self?.avatarView.image = image
         }
+        return self
     }
 }

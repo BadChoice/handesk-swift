@@ -24,17 +24,15 @@ class TicketViewController : UIViewController {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "comment", for: indexPath) as! TicketCommentCell
-            cell.setup(ticket.conversation[indexPath.row])
-            return cell
+            return (dequeue("comment", for:indexPath) as TicketCommentCell).setup(ticket.conversation[indexPath.row])
         }
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! TicketHeaderCell
-            cell.setup(ticket)
-            return cell
+            return (dequeue("header", for: indexPath) as TicketHeaderCell).setup(ticket)
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "info", for: indexPath) as! TicketInfoCell
-        cell.setup(ticket)
-        return cell
+        return (dequeue("info", for: indexPath) as TicketInfoCell).setup(ticket)
+    }
+    
+    private func dequeue<T:UITableViewCell>(_ identifier:String, for indexPath:IndexPath) -> T{
+        return self.tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! T
     }
 }
