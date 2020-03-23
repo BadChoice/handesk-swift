@@ -9,7 +9,10 @@ class TicketViewController : UIViewController {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath)
+        if indexPath.row == 0 {
+            return tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath)
+        }
+        return tableView.dequeueReusableCell(withIdentifier: "info", for: indexPath)
         //tableView.dequeue("header"TicketHeaderCell()
     }
 }

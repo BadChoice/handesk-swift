@@ -37,6 +37,8 @@
 		8DD483802424C59500501BA5 /* TicketsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4837F2424C59500501BA5 /* TicketsProvider.swift */; };
 		8DD483842424C9EA00501BA5 /* TicketsProviderMockTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD483832424C9EA00501BA5 /* TicketsProviderMockTest.swift */; };
 		8DD483862424D1A000501BA5 /* UITableViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD483852424D1A000501BA5 /* UITableViewMock.swift */; };
+		8DD483882428B38E00501BA5 /* TicketInfoCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD483872428B38E00501BA5 /* TicketInfoCellTest.swift */; };
+		8DD4838A2428B82600501BA5 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD483892428B82600501BA5 /* Team.swift */; };
 		8DF9702424211E0200242861 /* DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702324211E0200242861 /* DateTest.swift */; };
 		8DF9702724211ED900242861 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702624211ED900242861 /* DateExtension.swift */; };
 		8DF9702924220BA000242861 /* TicketStatusTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9702824220BA000242861 /* TicketStatusTest.swift */; };
@@ -95,6 +97,8 @@
 		8DD4837F2424C59500501BA5 /* TicketsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsProvider.swift; sourceTree = "<group>"; };
 		8DD483832424C9EA00501BA5 /* TicketsProviderMockTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsProviderMockTest.swift; sourceTree = "<group>"; };
 		8DD483852424D1A000501BA5 /* UITableViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewMock.swift; sourceTree = "<group>"; };
+		8DD483872428B38E00501BA5 /* TicketInfoCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketInfoCellTest.swift; sourceTree = "<group>"; };
+		8DD483892428B82600501BA5 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		8DF9702324211E0200242861 /* DateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTest.swift; sourceTree = "<group>"; };
 		8DF9702624211ED900242861 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		8DF9702824220BA000242861 /* TicketStatusTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketStatusTest.swift; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 				8DA484AA242293EB00A492EF /* Email.swift */,
 				BB094AC524266D6A00F1C9F2 /* Agent.swift */,
 				BB094AC724266E0B00F1C9F2 /* Comment.swift */,
+				8DD483892428B82600501BA5 /* Team.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 				8DA484AC2423B60200A492EF /* ContainerTest.swift */,
 				8DD483832424C9EA00501BA5 /* TicketsProviderMockTest.swift */,
 				BB094AD124279D0C00F1C9F2 /* TicketHeaderCellTest.swift */,
+				8DD483872428B38E00501BA5 /* TicketInfoCellTest.swift */,
 			);
 			path = unit;
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 				8D8756C3241F69E8000DBA40 /* Ticket.swift in Sources */,
 				BB094AC824266E0B00F1C9F2 /* Comment.swift in Sources */,
 				BB094AC624266D6A00F1C9F2 /* Agent.swift in Sources */,
+				8DD4838A2428B82600501BA5 /* Team.swift in Sources */,
 				8D8756C8241FEF68000DBA40 /* TicketCell.swift in Sources */,
 				BB094ACA2426706D00F1C9F2 /* TicketViewController.swift in Sources */,
 				8DA484A524227C0D00A492EF /* ImageDownloader.swift in Sources */,
@@ -418,6 +425,7 @@
 				8DF9702424211E0200242861 /* DateTest.swift in Sources */,
 				8DA484A3242279BC00A492EF /* ImageDownloaderMock.swift in Sources */,
 				BB9A5BC7242667E300FEB0DE /* TicketViewControllerTest.swift in Sources */,
+				8DD483882428B38E00501BA5 /* TicketInfoCellTest.swift in Sources */,
 				8DF9702924220BA000242861 /* TicketStatusTest.swift in Sources */,
 				8D8756CB2420D227000DBA40 /* TicketCellTest.swift in Sources */,
 				8DD483862424D1A000501BA5 /* UITableViewMock.swift in Sources */,

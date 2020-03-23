@@ -23,6 +23,8 @@ struct Ticket: Equatable {
     let updated_at:String
     let status:Status
     let priority:Priority
+    let team:Team?
+    let agent:Agent?
     let isBug:Bool
     let isEscalated:Bool
     var comments:[Comment]?
