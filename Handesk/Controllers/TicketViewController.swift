@@ -2,8 +2,22 @@ import UIKit
 
 class TicketViewController : UIViewController {
     var ticket:Ticket!
+    lazy var ticketsProvider:TicketsProvider! = { TicketsProvider() }()
     @IBOutlet weak var tableView:UITableView!
+        
+    override func viewDidLoad() {
+        ticketsProvider.fetchTicket(id: ticket.id) { [weak self] ticket in
+            self?.ticket = ticket
+            self?.onTicketFetched()
+        }
+    }
     
+    func onTicketFetched(){
+        tableView.reloadData()
+    }
+    
+    
+    //MARK: DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         section == 0 ? 2 : ticket.conversation.count
     }

@@ -28,4 +28,34 @@ class TicketsProviderMockTest: XCTestCase {
         XCTAssertTrue(ticketsProvider.didFetchTheTickets)
         wait(for: [expectation], timeout: 1)
     }
+    
+    
+    func test_it_can_fetch_a_ticket_by_its_id() {
+        var ticket = Ticket(id:10, title: "My first ticket")
+        ticket.comments = [
+            Comment(body: "First comment"),
+            Comment(body: "Second comment"),
+        ]
+        let anotherTicket = Ticket(id:11, title: "Another ticket")
+        let provider = TicketsProviderMock([anotherTicket, ticket])
+
+        
+        let expectation = XCTestExpectation(description: "Ticket fetched")
+                        
+        //Act
+        provider.fetchTicket(id: 10) { ticket in
+            XCTAssertEqual(2, ticket.comments?.count)
+            XCTAssertEqual("My first ticket", ticket.title)
+            XCTAssertEqual("First comment", ticket.comments![0].body)
+            XCTAssertEqual("Second comment", ticket.comments![1].body)
+                    
+            expectation.fulfill()
+        }
+        
+
+        //Assert
+        XCTAssertEqual([10], provider.ticketsFetched)
+        wait(for: [expectation], timeout: 1)
+    }
+        
 }

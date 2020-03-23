@@ -16,6 +16,7 @@ struct Ticket: Equatable {
         var initial:String { "\(self)".prefix(1).uppercased() }
     }
     
+    let id:Int
     let title:String
     let body:String
     let requester:Requester

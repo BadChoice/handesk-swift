@@ -64,4 +64,30 @@ class TicketViewControllerTest: XCTestCase {
         XCTAssertEqual(UIColor(named:"note"),       privateCommentCell.bodyLabel.backgroundColor)
         XCTAssertNotNil(bodyCommentCell.avatarView.image)
     }
+    
+    func test_it_fetches_the_ticket_comments(){
+        let ticketWithoutComments   = Ticket(id:10, title: "My first ticket")
+        var ticketWithComments      = Ticket(id:10, title: "My first ticket")
+        ticketWithComments.comments = [
+            Comment(body: "First comment"),
+            Comment(body: "Second comment"),
+        ]
+        
+        let provider      = TicketsProviderMock([ticketWithComments])
+        let tableView = UITableViewMock()
+        let vc:TicketViewController = instantiateStoryboardController("Tickets", "show")!
+        vc.ticket          = ticketWithoutComments
+        vc.ticketsProvider = provider
+        vc.tableView       = tableView
+        
+        XCTAssertNil(vc.ticket.comments)
+        
+        //Act
+        vc.viewDidLoad()
+        
+        //Assert
+        XCTAssertEqual([10], provider.ticketsFetched)
+        XCTAssertEqual(1, tableView.didReloadDataCallCount)
+        XCTAssertEqual(2, vc.ticket.comments?.count)
+    }
 }
