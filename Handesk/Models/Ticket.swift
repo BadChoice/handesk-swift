@@ -29,6 +29,14 @@ struct Ticket: Equatable {
     let isEscalated:Bool
     var comments:[Comment]?
     
+    var conversation:[Comment] {
+        [bodyAsComment()] + (comments ?? [])
+    }
+    
+    func bodyAsComment() -> Comment {
+        Comment(requester: requester, isPrivate: false, body: body, created_at: created_at)
+    }
+    
     static func == (lhs: Ticket, rhs: Ticket) -> Bool {
         lhs.title == rhs.title
     }

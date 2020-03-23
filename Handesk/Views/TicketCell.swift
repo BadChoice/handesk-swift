@@ -10,9 +10,9 @@ class TicketCell : UITableViewCell {
     @IBOutlet weak var infoStackView:TicketInfoLegendView!
         
     func setup(_ ticket:Ticket){
-        userLabel.text  = ticket.requester.name
-        titleLabel.text = ticket.title
-        bodyLabel?.text  = ticket.body
+        userLabel.text      = ticket.requester.name
+        titleLabel.text     = ticket.title
+        bodyLabel?.text     = ticket.body
         updatedAtLabel?.text = Date(iso8061: ticket.updated_at)?.display
         statusView.backgroundColor = ticket.status.color
         infoStackView.setup(ticket)

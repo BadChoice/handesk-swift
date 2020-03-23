@@ -9,5 +9,5 @@ struct Comment{
     let requester:Author
     let isPrivate:Bool
     let body:String
-    let updated_at:String
+    let created_at:String
 }

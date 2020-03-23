@@ -4,10 +4,6 @@ import XCTest
 
 class TicketInfoCellTest: XCTestCase {
 
-    override func setUp() {
-       NSTimeZone.default = TimeZone(secondsFromGMT: -3600)!
-    }
-
     func test_cell_can_display_ticket_info() {
         let team      = Team(name: "Support team")
         let agent     = Agent(name: "Bruce wayne", email: "bruce@wayne.com")
